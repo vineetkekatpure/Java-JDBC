@@ -128,7 +128,7 @@ public class Add_records {
 
 			private boolean idIsPresent(int ID) throws SQLException 
 			{
-				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/shreyas","root","1962");  
+				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/vineet","root","1962");  
 				Statement stmt=con.createStatement();
 				ResultSet rs=stmt.executeQuery("select * from student where id="+ID);
 				if(rs.next())
@@ -144,7 +144,7 @@ public class Add_records {
 
 			private void addData(String name, String phone, String dob, String email, String gender,int ID) throws SQLException
 			{
-				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/shreyas","root","1962");  
+				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/vineet","root","1962");  
 				//here sonoo is database name, root is username and password  
 				Statement stmt=con.createStatement();
 				stmt.executeUpdate("insert into student values("+ID+","+"'"+name+"','"+phone+"','"+dob+"','"+gender+"','"+email+"')");
@@ -184,7 +184,7 @@ public class Add_records {
 
 			private void deleteStudent(int ID) throws SQLException 
 			{
-				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/shreyas","root","1962");  
+				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/vineet","root","1962");  
 				//here sonoo is database name, root is username and password  
 				Statement stmt=con.createStatement();
 				stmt.executeUpdate("delete from student where id="+ID);
@@ -214,7 +214,7 @@ public class Add_records {
 
 			private void showData(int ID) throws SQLException 
 			{
-				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/shreyas","root","1962"); 
+				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/vineet","root","1962"); 
 				Statement stmt=con.createStatement();
 				ResultSet rs=stmt.executeQuery("select * from student where id="+ID);
 				if(rs.next())
